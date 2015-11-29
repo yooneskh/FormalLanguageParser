@@ -6,7 +6,7 @@ import java.util.*;
 
 public abstract class ESParser {
 
-    private List<Map.Entry<String, String>> rules;
+    private RuleList rules;
     private String initialVariable;
     private boolean couldDerive;
     private Integer[] lastDerivation;
@@ -14,7 +14,7 @@ public abstract class ESParser {
 
     public ESParser(String initialVariable) {
         this.initialVariable = initialVariable;
-        rules = new ArrayList<Map.Entry<String, String>>();
+        rules = new RuleList();
     }
 
     public void addRule(String left, String right) {
